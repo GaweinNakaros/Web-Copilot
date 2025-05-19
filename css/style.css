@@ -24,11 +24,20 @@ body {
         "sidebar main cart"
         "footer footer footer";
     grid-template-columns: 220px 1fr 320px; /* Define el ancho de las columnas */
-    grid-template-rows: 80px 60px 1fr 60px; /* Define la altura de las filas, 60px para nav */
-    min-height: 100vh; /* Altura mínima igual a la ventana */
+    /*  Primera columna: 220px (sidebar)
+        Segunda columna: 1fr (el espacio restante, para el contenido principal)
+        Tercera columna: 320px (carrito)
+    */
+    grid-template-rows: 80px 60px 1fr 60px; /* Define la altura de las filas */
+    /*  Primera fila: 80px (header)
+        Segunda fila: 60px (nav)
+        Tercera fila: 1fr (el espacio restante, para el contenido principal)
+        Cuarta fila: 60px (footer)
+    */
+    min-height: 100vh; /* Altura mínima igual a la ventana, grid ocupará al menos el 100% de la altura de la ventana. */
     gap: 16px; /* Espacio entre las áreas del grid */
-    padding: 16px; /* Espaciado interno del grid */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+    padding: 16px; /* Espaciado interno entre filas y columnas del grid */
+    box-sizing: border-box; /* Incluye el padding y el bordr en el tamaño total del grid */
     background: #f5f5f5; /* Color de fondo del grid */
 }
 
@@ -180,6 +189,7 @@ body {
 .producto h3 {
     margin: 10px 0 5px 0; /* Espaciado arriba y abajo */
     font-size: 1.2rem; /* Tamaño de fuente */
+    text-align: center; /* Centra el texto */
 }
 
 .producto p {
