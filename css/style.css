@@ -199,7 +199,7 @@ body {
     text-align: center; /* Centra el texto */
 }
 
-.precio {
+.precio { /* Precio del producto  afecta a tods los productos*/
     font-weight: bold; /* Texto en negrita */
     color: #007bff; /* Color azul */
     font-size: 1.1rem; /* Tamaño de fuente */
@@ -219,6 +219,63 @@ body {
 }
 
 .producto button:hover {
+    background: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+.producto-detalle {
+    display: flex; /* Flexbox para el contenido interno */
+    flex-direction: column; /* Apila los hijos verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
+    background: #fff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08); /* Sombra suave */
+    padding: 20px; /* Espaciado interno */
+    max-width: 400px;   /* Ancho máximo de la tarjeta */
+    max-height: 600px;  /* Alto máximo de la tarjeta */
+    width: 100%;        /* Ocupa todo el ancho de la celda del grid */
+    height: 100%;       /* Ocupa todo el alto de la celda del grid */
+}
+
+.producto-detalle:hover {
+    transform: translateY(-5px) scale(1.03); /* Eleva y agranda la tarjeta al pasar el mouse */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.13); /* Sombra más notoria */
+}
+
+.producto-detalle img {
+    width: 150px; /* Ancho fijo de imagen */
+    height: 150px; /* Alto fijo de imagen */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio */
+    border-radius: 6px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+}
+
+.producto-detalle h3 {
+    margin: 10px 0 5px 0; /* Espaciado arriba y abajo */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    text-align: center; /* Centra el texto */
+}
+
+.producto-detalle p {
+    font-size: 0.98rem; /* Tamaño de fuente */
+    color: #555; /* Color de texto */
+    margin: 0 0 10px 0; /* Espacio debajo */
+    text-align: center; /* Centra el texto */
+}
+
+.producto-detalle button {
+    background: #28a745; /* Fondo verde */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 8px 20px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de mano */
+    transition: background 0.2s; /* Animación suave */
+    margin-top: auto; /* Empuja el botón al fondo de la tarjeta si hay espacio */
+}
+
+.producto-detalle button:hover {
     background: #218838; /* Verde más oscuro al pasar el mouse */
 }
 
